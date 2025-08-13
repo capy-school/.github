@@ -1,0 +1,69 @@
+name: "🗺️ Epic"
+description: Container for multiple related tickets.
+title: "[🗺️ Type: Epic] <initiative name>"
+labels:
+  - "Type: Epic"
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Scope, business case, expected outcome.
+      placeholder: High-level overview, why now, success definition
+    validations:
+      required: true
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals & Objectives
+      description: What success looks like.
+      placeholder: |
+        - Goal 1
+        - Goal 2
+    validations:
+      required: true
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: High-Level Deliverables
+      description: Features/Stories it contains.
+      placeholder: |
+        - Feature A
+        - Story B
+    validations:
+      required: true
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Key target dates or milestones.
+      placeholder: e.g., Beta by 2025-09-01
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders
+      description: PM, tech lead, QA lead, etc.
+      placeholder: Name (Role), Name (Role)
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: External teams, vendors, other epics.
+      placeholder: Links or descriptions
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Assumptions
+      description: Known blockers, constraints.
+      placeholder: Risks, mitigations, assumptions
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done for Epic
+      description: Criteria for closing the epic.
+      placeholder: |
+        - [ ] All child issues closed
+        - [ ] Metrics achieved
+        - [ ] Docs updated
+    validations:
+      required: true

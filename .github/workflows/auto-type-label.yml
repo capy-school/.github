@@ -1,0 +1,39 @@
+name: Auto add Type label from title
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure Type label based on title
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const title = context.payload.issue.title || "";
+            const map = [
+              { key: 'Type: Bug', patterns: ['[🐛', 'Type: Bug'] },
+              { key: 'Type: Feature', patterns: ['[✨', 'Type: Feature'] },
+              { key: 'Type: Tech Task', patterns: ['[🛠️', 'Type: Tech Task', 'Type: Tech'] },
+              { key: 'Type: Research', patterns: ['[🔬', 'Type: Research'] },
+              { key: 'Type: Question', patterns: ['[❓', 'Type: Question'] },
+              { key: 'Type: Documentation', patterns: ['[📝', 'Type: Documentation'] },
+              { key: 'Type: Epic', patterns: ['[🗺️', 'Type: Epic'] }
+            ];
+            const found = map.find(m => m.patterns.some(p => title.includes(p)));
+            if (!found) return;
+            const labels = context.payload.issue.labels.map(l => l.name);
+            if (labels.includes(found.key)) return;
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: [found.key]
+            });

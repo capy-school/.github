@@ -1,0 +1,54 @@
+name: Apply form labels
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply labels from Issue Form content
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = (context.payload.issue.body || '').toLowerCase();
+
+            const candidateLabels = [
+              // Severity
+              'Severity: Critical','Severity: High','Severity: Medium','Severity: Low',
+              // Priority
+              'P0','P1','P2','P3','P4',
+              // Impact
+              'Impact: UX','Impact: Risk','Impact: Revenue','Impact: Growth','Impact: Cost',
+              // Complexity
+              'Complexity: 1','Complexity: 2','Complexity: 3','Complexity: 4','Complexity: 5',
+              'Complexity: 6','Complexity: 7','Complexity: 8','Complexity: 9','Complexity: 10',
+              // Agent
+              'Agent: Developer','Agent: Background'
+            ];
+
+            // Normalize for matching
+            const tokens = candidateLabels.map(l => ({raw: l, lc: l.toLowerCase()}));
+
+            const toAdd = tokens
+              .filter(t => body.includes(t.lc))
+              .map(t => t.raw);
+
+            if (toAdd.length === 0) return;
+
+            const existing = (context.payload.issue.labels || []).map(l => l.name);
+            const final = toAdd.filter(l => !existing.includes(l));
+            if (final.length === 0) return;
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: final
+            });

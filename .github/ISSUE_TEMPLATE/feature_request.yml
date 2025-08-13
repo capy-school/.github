@@ -1,0 +1,109 @@
+name: "✨ Feature / User Story"
+description: Define what we’re delivering for the end user.
+title: "[✨ Type: Feature] As a <role>, I want <goal> so that <reason>"
+labels:
+  - "Type: Feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use the user story format and fill in acceptance criteria.
+  - type: textarea
+    id: user_story
+    attributes:
+      label: Description / User Story
+      description: Use the format “As a [role], I want [goal] so that [reason].”
+      placeholder: |
+        As a <role>, I want <goal> so that <reason>.
+    validations:
+      required: true
+  - type: textarea
+    id: business_value
+    attributes:
+      label: Business Value
+      description: Why this matters.
+      placeholder: e.g., Increases conversion by enabling...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Bullet points or Gherkin format.
+      placeholder: |
+        - [ ] Given <context> When <action> Then <outcome>
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Links to related tickets or epics.
+      placeholder: https://github.com/org/repo/issues/123
+  - type: input
+    id: design_links
+    attributes:
+      label: Design/Mockups
+      description: Links to Figma, wireframes, etc.
+      placeholder: https://www.figma.com/file/...
+  - type: textarea
+    id: non_functional
+    attributes:
+      label: Non-Functional Requirements
+      description: Performance, accessibility, security, etc.
+      placeholder: e.g., Core Web Vitals LCP < 2.5s; WCAG AA; TLS 1.3 only
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (P0 highest)
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+        - P4
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Areas
+      options:
+        - label: Impact: UX
+        - label: Impact: Risk
+        - label: Impact: Revenue
+        - label: Impact: Growth
+        - label: Impact: Cost
+  - type: textarea
+    id: test_notes
+    attributes:
+      label: Test Notes
+      description: Any special QA considerations.
+      placeholder: Edge cases, locales, devices, data preconditions...
+  - type: input
+    id: epic_links
+    attributes:
+      label: Linked Epic(s)
+      description: Link to related Epic(s) if applicable.
+      placeholder: https://github.com/org/repo/issues/123
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      options:
+        - Complexity: 1
+        - Complexity: 2
+        - Complexity: 3
+        - Complexity: 4
+        - Complexity: 5
+        - Complexity: 6
+        - Complexity: 7
+        - Complexity: 8
+        - Complexity: 9
+        - Complexity: 10
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Assigned Agent Type
+      options:
+        - Agent: Developer
+        - Agent: Background

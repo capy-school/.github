@@ -1,0 +1,142 @@
+name: "🐛 Bug report"
+description: Report a problem so we can fix it quickly.
+title: "[🐛 Type: Bug] <short summary>"
+labels:
+  - "Type: Bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the sections below so we can reproduce and verify the fix.
+  - type: input
+    id: summary
+    attributes:
+      label: Title
+      description: Clear and concise, e.g., "Login fails with 500 error on mobile."
+      placeholder: Short, action-oriented title
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief summary of the problem.
+      placeholder: What is happening? Any context?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Clear list of actions to reproduce the issue.
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. Observe ...
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      placeholder: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      placeholder: What actually happens?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Environment details (e.g., Staging/Prod, OS, Browser version, App version, Device).
+      placeholder: e.g., Staging, iOS 17.4, Safari 17.2, App 2.3.1
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Select the severity level.
+      options:
+        - Severity: Critical
+        - Severity: High
+        - Severity: Medium
+        - Severity: Low
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (P0 highest)
+      description: Select the priority.
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+        - P4
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Areas
+      description: Select any that apply.
+      options:
+        - label: Impact: UX
+        - label: Impact: Risk
+        - label: Impact: Revenue
+        - label: Impact: Growth
+        - label: Impact: Cost
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Add screenshots, logs, or videos if possible. Drag and drop to attach.
+      placeholder: Paste logs or describe where to find them.
+      render: text
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How QA/dev confirms it’s fixed.
+      placeholder: |
+        - [ ] Reproduction steps no longer cause the issue
+        - [ ] Unit/Integration tests added/updated
+        - [ ] Monitoring/alerts updated (if applicable)
+  - type: input
+    id: epic_links
+    attributes:
+      label: Linked Epic(s)
+      description: Link to related Epic(s) if applicable.
+      placeholder: https://github.com/org/repo/issues/123
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Assigned Agent Type
+      description: Who is expected to work on this?
+      options:
+        - Agent: Developer
+        - Agent: Background
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity (T-shirt/points proxy)
+      description: Pick a rough complexity value if known.
+      options:
+        - Complexity: 1
+        - Complexity: 2
+        - Complexity: 3
+        - Complexity: 4
+        - Complexity: 5
+        - Complexity: 6
+        - Complexity: 7
+        - Complexity: 8
+        - Complexity: 9
+        - Complexity: 10
