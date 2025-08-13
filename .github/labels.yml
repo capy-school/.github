@@ -1,0 +1,135 @@
+# Managed by GitHub labeler workflow. Edit this file and push to sync.
+- name: wontfix
+  color: 000000
+  description: This will not be worked on
+- name: duplicate
+  color: cfd3d7
+  description: This issue or pull request already exists
+
+# Type
+- name: Type: Bug
+  color: d73a4a
+  description: Unexpected behavior requiring fix
+- name: Type: Feature
+  color: a2eeef
+  description: New user-facing functionality or improvement
+- name: Type: Tech Task
+  color: 2b8a3e
+  description: Non-user-facing code, infra, or refactoring work
+- name: Type: Research
+  color: d4c5f9
+  description: Spike, POC, or feasibility analysis needed
+- name: Type: Question
+  color: d876e3
+  description: Needs clarification or discussion
+- name: Type: Documentation
+  color: 0075ca
+  description: Content updates, guides, or API references
+- name: Type: Epic
+  color: 5319e7
+  description: Large initiative grouping multiple tickets
+
+# Status
+- name: Status: Ready for Dev
+  color: 0e8a16
+  description: Fully specified, dependencies resolved, approved - good to start coding
+- name: Status: Needs Spec
+  color: fbca04
+  description: Missing requirements, designs, or technical validation
+- name: Status: Needs QA
+  color: 1d76db
+  description: Dev complete - needs testing, verification, defect logging
+- name: Status: In Review
+  color: db61a2
+  description: PR submitted - needs feedback/approval
+- name: Status: Blocked
+  color: b60205
+  description: External dependency - requires action to unblock
+
+# Severity
+- name: Severity: Critical
+  color: b60205
+  description: System down, legal risk, revenue loss - drop everything
+- name: Severity: High
+  color: d73a4a
+  description: Core broken, no workaround - fix within 24h
+- name: Severity: Medium
+  color: fbca04
+  description: Partial issue, has workaround - next sprint
+- name: Severity: Low
+  color: c2e0c6
+  description: Cosmetic, docs, edge case - backlog
+
+# Priority
+- name: P0
+  color: b60205
+  description: Site down, security breach
+- name: P1
+  color: d73a4a
+  description: Major feature blocked
+- name: P2
+  color: fbca04
+  description: Key user journey impact
+- name: P3
+  color: 0e8a16
+  description: General improvements
+- name: P4
+  color: c2e0c6
+  description: Low urgency / nice to have
+
+# Impact
+- name: Impact: UX
+  color: 0052cc
+  description: Improves user experience (e.g., page load time)
+- name: Impact: Risk
+  color: 5319e7
+  description: Reduces compliance/security risks (e.g., GDPR compliance)
+- name: Impact: Revenue
+  color: 0e8a16
+  description: Directly affects sales/conversion (e.g., checkout flow)
+- name: Impact: Growth
+  color: 1d76db
+  description: User acquisition/retention (e.g., referral program)
+- name: Impact: Cost
+  color: 795548
+  description: Lowers operational costs (e.g., server optimization)
+
+# Complexity (estimation proxy)
+- name: Complexity: 1
+  color: ededed
+  description: Lowest complexity
+- name: Complexity: 2
+  color: ededed
+  description: Very low complexity
+- name: Complexity: 3
+  color: ededed
+  description: Low complexity
+- name: Complexity: 4
+  color: ededed
+  description: Low-medium complexity
+- name: Complexity: 5
+  color: ededed
+  description: Medium complexity
+- name: Complexity: 6
+  color: ededed
+  description: Medium-high complexity
+- name: Complexity: 7
+  color: ededed
+  description: High complexity
+- name: Complexity: 8
+  color: ededed
+  description: Very high complexity
+- name: Complexity: 9
+  color: ededed
+  description: Extreme complexity
+- name: Complexity: 10
+  color: ededed
+  description: Highest complexity
+
+# Agent routing
+- name: Agent: Developer
+  color: 0e8a16
+  description: To be solved by a Developer
+- name: Agent: Background
+  color: 5319e7
+  description: To be solved by Cursor Background Agent

@@ -1,0 +1,88 @@
+name: "🛠️ Technical Task"
+description: Internal engineering work items (refactors, config changes, CI/CD updates).
+title: "[🛠️ Type: Tech Task] <action-oriented title>"
+labels:
+  - "Type: Tech Task"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What’s being changed and why.
+      placeholder: Summary of the change and rationale
+    validations:
+      required: true
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical Context
+      description: Current vs target state; relevant code, architecture, or constraints.
+      placeholder: Current -> Target; diagrams/links if useful
+  - type: textarea
+    id: impact_analysis
+    attributes:
+      label: Impact Analysis
+      description: Risk, affected systems, blast radius.
+      placeholder: Risks, mitigations, roll-back plan
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Measurable completion indicators.
+      placeholder: |
+        - [ ] All pipelines green
+        - [ ] Backward compatibility maintained
+        - [ ] Monitoring updated
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+    
+      description: Must-happen-before tasks, related tickets.
+      placeholder: https://github.com/org/repo/issues/123
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (P0 highest)
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+        - P4
+  - type: textarea
+    id: verification
+    attributes:
+      label: Test/Verification Plan
+      description: How to confirm it’s successful.
+      placeholder: Test cases, smoke checks, metrics to watch
+  - type: input
+    id: epic_links
+    attributes:
+      label: Linked Epic(s)
+      description: Link to related Epic(s) if applicable.
+      placeholder: https://github.com/org/repo/issues/123
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      options:
+        - Complexity: 1
+        - Complexity: 2
+        - Complexity: 3
+        - Complexity: 4
+        - Complexity: 5
+        - Complexity: 6
+        - Complexity: 7
+        - Complexity: 8
+        - Complexity: 9
+        - Complexity: 10
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Assigned Agent Type
+      options:
+        - Agent: Developer
+        - Agent: Background

@@ -1,0 +1,69 @@
+name: "🔬 Research / Spike"
+description: Explore feasibility, investigate, or prototype.
+title: "[🔬 Type: Research] <topic or question>"
+labels:
+  - "Type: Research"
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / Questions
+      description: What are we trying to learn or decide?
+      placeholder: Key questions or hypothesis
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & Timebox
+      description: What’s in/out, and how long will we spend?
+      placeholder: In scope, out of scope, timebox (e.g., 2 days)
+    validations:
+      required: true
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables / Expected Output
+      description: Decision doc, POC code, recommendation, etc.
+      placeholder: Links or bullets for expected outputs
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How we will know the research is done.
+      placeholder: |
+        - [ ] Questions answered
+        - [ ] Documented recommendation
+        - [ ] Next steps defined
+  - type: input
+    id: epic_links
+    attributes:
+      label: Linked Epic(s)
+      placeholder: https://github.com/org/repo/issues/123
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (optional)
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+        - P4
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      options:
+        - Complexity: 1
+        - Complexity: 2
+        - Complexity: 3
+        - Complexity: 4
+        - Complexity: 5
+        - Complexity: 6
+        - Complexity: 7
+        - Complexity: 8
+        - Complexity: 9
+        - Complexity: 10

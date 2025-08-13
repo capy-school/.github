@@ -1,0 +1,42 @@
+name: "❓ Question"
+description: Ask for clarification or start a discussion.
+title: "[❓ Type: Question] <topic>"
+labels:
+  - "Type: Question"
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to do? What have you tried?
+      placeholder: Relevant details and links
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Be as specific as possible.
+      placeholder: Your question here
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Expected Answer Type
+      description: e.g., short pointer, code snippet, architectural guidance
+  - type: input
+    id: epic_links
+    attributes:
+      label: Linked Epic(s)
+      placeholder: https://github.com/org/repo/issues/123
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Areas (optional)
+      options:
+        - label: Impact: UX
+        - label: Impact: Risk
+        - label: Impact: Revenue
+        - label: Impact: Growth
+        - label: Impact: Cost
