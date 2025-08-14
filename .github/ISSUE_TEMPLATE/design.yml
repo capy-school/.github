@@ -1,0 +1,26 @@
+name: "Design"
+description: "Design task (UX/UI, visual, interaction)"
+title: "[Design] <brief description>"
+labels: ["Type: Design"]
+body:
+  - type: textarea
+    id: brief
+    attributes:
+      label: Brief
+      placeholder: What are we designing and why?
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements & constraints
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      placeholder: Wireframes, mocks, prototypes, specs
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      placeholder: Inspiration, prior art, links

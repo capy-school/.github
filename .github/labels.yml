@@ -28,6 +28,9 @@
 - name: "Type: Epic"
   color: 0052cc
   description: Large initiative grouping multiple tickets
+- name: "Type: Design"
+  color: 0052cc
+  description: Design work (UX/UI, visual, interaction)
 
 # Status
 - name: "Status: Ready for Dev"
