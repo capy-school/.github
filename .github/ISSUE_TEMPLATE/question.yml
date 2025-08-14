@@ -1,4 +1,4 @@
-name: "❓ Question"
+name: "💬 Question"
 description: "Ask a question or request support"
 title: "[Question] <Title>"
 labels: ["Type: Question"]
