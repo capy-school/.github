@@ -110,6 +110,7 @@ body:
         - [ ] Reproduction steps no longer cause the issue
         - [ ] Unit/Integration tests added/updated
         - [ ] Monitoring/alerts updated (if applicable)
+      render: markdown
   - type: input
     id: epic_links
     attributes:
