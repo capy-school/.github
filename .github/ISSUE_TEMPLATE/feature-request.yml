@@ -1,0 +1,41 @@
+name: "Feature request"
+description: "Propose a new feature"
+title: "[Feature] <Title>"
+labels: ["Type: Feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem this feature solves and the desired outcome.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      placeholder: What user problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      placeholder: Describe your proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: scope
+    attributes:
+      label: Out of scope
+  - type: checkboxes
+    id: impacts
+    attributes:
+      label: Areas impacted
+      options:
+        - label: API
+        - label: UI/UX
+        - label: Performance
+        - label: Security
+        - label: Docs

@@ -1,68 +1,22 @@
-name: "📝 Documentation"
-description: Content updates, guides, or API references.
-title: "[📝 Type: Documentation] <doc update title>"
-labels:
-  - "Type: Documentation"
+name: "Documentation"
+description: "Docs improvements or additions"
+title: "[Docs] <Title>"
+labels: ["Type: Documentation"]
 body:
   - type: textarea
-    id: description
+    id: scope
     attributes:
-      label: Description
-      description: What needs to be documented or updated.
-      placeholder: Summary of the docs change
+      label: Scope
+      placeholder: What needs to be documented?
     validations:
       required: true
-  - type: textarea
-    id: affected
-    attributes:
-      label: Affected Pages/Areas
-      description: Files, guides, or sections affected.
-      placeholder: Paths or links
   - type: textarea
     id: audience
     attributes:
       label: Audience
-      description: Who is this for (users, developers, ops)?
-      placeholder: Primary audience
+      placeholder: Who is this documentation for?
   - type: textarea
-    id: acceptance_criteria
+    id: references
     attributes:
-      label: Acceptance Criteria
-      description: How we confirm the docs are complete.
-      placeholder: |
-        - [ ] Pages updated
-        - [ ] Examples added
-        - [ ] Screenshots current
-    validations:
-      required: true
-  - type: textarea
-    id: dependencies
-    attributes:
-      label: Dependencies
-      description: Related features/PRs/epics.
-      placeholder: Links
-  - type: input
-    id: epic_links
-    attributes:
-      label: Linked Epic(s)
-      placeholder: https://github.com/org/repo/issues/123
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority (optional)
-      options:
-        - P0
-        - P1
-        - P2
-        - P3
-        - P4
-  - type: checkboxes
-    id: impact
-    attributes:
-      label: Impact Areas (optional)
-      options:
-        - label: Impact: UX
-        - label: Impact: Risk
-        - label: Impact: Revenue
-        - label: Impact: Growth
-        - label: Impact: Cost
+      label: References
+      placeholder: Links to related docs, issues, PRs
