@@ -31,12 +31,25 @@ body:
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: Acceptance Criteria
+      label: Acceptance Criteria (optional)
       description: How we will know the research is done.
       placeholder: |
         - [ ] Questions answered
         - [ ] Documented recommendation
         - [ ] Next steps defined
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders (optional)
+      placeholder: PM, Tech Lead, QA, Design
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes for Devs (optional)
+      placeholder: Additional context, hypotheses, success metrics
   - type: input
     id: epic_links
     attributes:

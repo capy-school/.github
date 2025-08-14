@@ -20,3 +20,8 @@ body:
     attributes:
       label: Environment (optional)
       placeholder: OS, Node, browser, app version, etc.
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes for Devs (optional)
+      placeholder: Additional context, goals, scope boundaries, resources, links

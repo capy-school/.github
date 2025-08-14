@@ -67,3 +67,24 @@ body:
         - [ ] Docs updated
     validations:
       required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (optional)
+      description: Additional, testable conditions for completion
+      placeholder: |
+        - [ ] Outcome validated with stakeholders
+        - [ ] Rollout/communication plan defined
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: stakeholders_pm
+    attributes:
+      label: Stakeholders (optional)
+      placeholder: PM, Exec sponsor(s), External partners
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes (optional)
+      placeholder: Business context, KPIs, non-goals
