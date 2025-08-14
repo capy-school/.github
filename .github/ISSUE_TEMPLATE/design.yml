@@ -24,3 +24,25 @@ body:
     attributes:
       label: References
       placeholder: Inspiration, prior art, links
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (optional)
+      description: Clear, testable conditions to consider this done
+      placeholder: |
+        - [ ] Approved design deliverables attached
+        - [ ] Accessibility reviewed
+        - [ ] Edge cases documented
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders (optional)
+      placeholder: PM, Designers, QA, Engineering
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes for Devs (optional)
+      placeholder: Additional context, goals, scope boundaries, resources, links

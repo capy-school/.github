@@ -20,3 +20,25 @@ body:
     attributes:
       label: References
       placeholder: Links to related docs, issues, PRs
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (optional)
+      description: Clear, testable conditions to consider this done
+      placeholder: |
+        - [ ] Page(s) updated
+        - [ ] Examples current
+        - [ ] Screenshots refreshed
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders (optional)
+      placeholder: PM, Docs, QA, Engineering
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes for Devs (optional)
+      placeholder: Additional context, goals, scope boundaries, resources, links

@@ -39,3 +39,34 @@ body:
         - label: Performance
         - label: Security
         - label: Docs
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (optional)
+      description: Clear, testable conditions to consider this done
+      placeholder: |
+        - [ ] Condition 1
+        - [ ] Condition 2
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders (optional)
+      placeholder: PM, QA, designers, external partners
+  - type: textarea
+    id: dependencies_pm
+    attributes:
+      label: Dependencies (optional)
+      placeholder: Related features, blocked by, links
+  - type: textarea
+    id: risk_assumptions
+    attributes:
+      label: Risks & Assumptions (optional)
+      placeholder: Known risks, constraints, assumptions
+  - type: textarea
+    id: pm_notes
+    attributes:
+      label: PM Notes for Devs (optional)
+      placeholder: Additional context, goals, scope boundaries, resources, links
