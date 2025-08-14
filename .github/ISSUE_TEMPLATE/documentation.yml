@@ -1,6 +1,6 @@
-name: "Documentation"
+name: "📝 Documentation"
 description: "Docs improvements or additions"
-title: "[📝 Type: Documentation] <Title>"
+title: "[Docs] <Title>"
 labels: ["Type: Documentation"]
 body:
   - type: textarea

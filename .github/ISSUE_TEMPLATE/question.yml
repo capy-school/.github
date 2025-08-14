@@ -1,6 +1,6 @@
-name: "Question"
+name: "❓ Question"
 description: "Ask a question or request support"
-title: "[❓ Type: Question] <Title>"
+title: "[Question] <Title>"
 labels: ["Type: Question"]
 body:
   - type: textarea
