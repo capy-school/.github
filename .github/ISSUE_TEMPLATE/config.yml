@@ -3,3 +3,6 @@ contact_links:
   - name: Questions & Support
     url: https://github.com/capy-school/capy-school/discussions
     about: Ask questions and get community support
+  - name: Security report
+    url: mailto:xcapyschoolx@gmail.com
+    about: Report security vulnerabilities privately

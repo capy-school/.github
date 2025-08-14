@@ -1,6 +1,6 @@
 name: "Feature request"
 description: "Propose a new feature"
-title: "[Feature] <Title>"
+title: "[✨ Type: Feature] <Title>"
 labels: ["Type: Feature"]
 body:
   - type: markdown

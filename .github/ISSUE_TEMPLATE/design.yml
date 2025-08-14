@@ -1,6 +1,6 @@
 name: "Design"
 description: "Design task (UX/UI, visual, interaction)"
-title: "[Design] <brief description>"
+title: "[🎨 Type: Design] <brief description>"
 labels: ["Type: Design"]
 body:
   - type: textarea
